@@ -1,0 +1,85 @@
+.main-grid-container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 5% repeat(auto-fit, minmax(0rem, 1fr)) 5%;
+    grid-gap: 2rem;
+    margin: 0 auto;
+    max-height: 100vh;
+    max-width: fit-content;
+    .column-1 {
+        grid-column: 2/3;
+    }
+
+    .column-2 {
+        grid-column: 3/4;
+    }
+
+    .column-1, .column-2 {
+        border: 0.2rem solid rgb(195, 195, 195);
+        border: 0.2rem solid rgba(0, 0, 0, 0.2);
+        display: grid;        
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, minmax(0rem, 1fr));
+        border-radius: 1.15rem;
+        margin: 1rem 0;
+        padding: 1rem;
+
+        .heading-wrapper {
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(2, 1fr);
+
+            h2 {
+                grid-column: 1/-1;
+                position: relative;
+                img {                
+                    position: absolute;
+                    width: 10%;
+                    height: auto;
+                    top: 0;
+                    right: 0;                
+                }
+            }           
+                
+            h3 {
+                grid-column: 1/-1;
+            }
+
+            p {
+                grid-column: 1/-1;
+                padding: 1rem 0rem;                
+            }            
+        }
+
+        .btn-wrapper {
+            grid-column: 1/-1;
+            justify-content: center;
+            align-self: center;       
+            border-top: 2px solid rgb(195, 195, 195);
+            border-top: 2px solid rgba(0, 0, 0, 0.2);
+            margin: 1rem -1rem 0 -1rem;
+            padding: 1rem 1rem 0rem 1rem;
+            .buttons{      
+                border-radius: 1rem;    
+                display: flex;                
+                max-width: 100%; 
+                button {
+                    padding: 1rem 0;
+                    width: 100%;                                       
+                }
+                .btn-1 {
+                    border-radius: 1rem 0 0 1rem;
+                    border: solid rgb(33, 186, 69);
+                    border-right: none;
+                    color: rgb(20, 175,20);
+                }                
+                .btn-2 {
+                    border-radius: 0 1rem 1rem 0;
+                    border: solid rgb(219, 40, 40);
+                    color: rgb(175, 20, 20);
+                }
+            }    
+        }
+    }
+}
