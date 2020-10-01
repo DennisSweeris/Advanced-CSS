@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.links li:nth-child(1) :hover {
+    color: lightblue;
+    font-weight: bold;
+}
+
+.links li:nth-child(2) :active {
+    color: red;
+    font-style: italic;
+}
+
+.links li:nth-child(3) :visited {
+    color: yellow;
+}
+
+.links li:nth-child(4) :focus {
+    font-size: 20px;
+    color: green;
+    outline: none;
+}
+
+.nav-container {
+    background-color: darkblue;
+    max-width: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px 20px 10px 0px;
+}
+
+nav ul li a{
+    color: white;
+}
+
+.currentPage {
+    background-color: rgb(58, 58, 133);
+}
+
+li:hover{
+    background-color: lightblue;
+}
+
+input:focus {
+    border: 5px solid RGB(74, 207, 238);
+}
