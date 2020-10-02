@@ -1,0 +1,7 @@
+$padding: 20px;
+$lightgreen: #c0eea9;
+$green: #97d279;
+
+@mixin SameStyling {
+    padding: $padding;
+}
