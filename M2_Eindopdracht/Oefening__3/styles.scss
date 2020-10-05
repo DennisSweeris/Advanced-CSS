@@ -1,0 +1,89 @@
+html {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #525252;
+}
+
+$transform-smooth: transform 500ms ease-in-out;
+
+@mixin social__animation {
+    &::after {
+        padding-left: 3rem;
+        transition: transform 1s;
+        text-decoration: underline;
+    }
+    &:hover {
+        transform: translateX(-25rem);
+        transition: $transform-smooth;
+        text-align: left;
+        cursor: pointer;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    width: 33rem;
+    transform: translateX(26rem);
+    a {
+        transition: $transform-smooth;
+        color: #fff;
+        text-decoration: none;
+        padding: 2.5rem;
+        text-align: left;
+    }
+    &__blog {
+        background-color: #e17b77;
+        &::after {
+            content: "Check out my blog";
+            font-weight: normal;
+        }
+        @include social__animation;
+    }
+    &__twitter {
+        background-color: #00aced;
+        &::after {
+            content: "Follow me on Twitter";
+        }
+        @include social__animation;
+    }
+    &__linkedin {
+        background-color: #007bb6;
+        &::after {
+            content: "Connect on Linkedin";
+        }
+        @include social__animation;
+    }
+    &__facebook {
+        background-color: #3b5998;
+        &::after {
+            content: "Like my Facebook page";
+        }
+        @include social__animation;
+    }
+    &__github {
+        background-color: #333;
+        &::after {
+            content: "See my projects on Github";
+        }
+        @include social__animation;
+    }
+}
+
